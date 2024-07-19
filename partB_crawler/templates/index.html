@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reddit Sports Search</title>
+    <style>
+        body {
+                font-family: 'Helvetica', 'Arial', sans-serif;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+        }
+        .header {
+                text-align: center;
+                margin-bottom: 25px;
+        }
+        .header h1 {
+                font-size: 64px;
+                color: #FF4500;
+                margin-bottom: 10px;
+        }
+        .header p {
+                font-size: 21px;
+                font-weight: bold;
+                color: #000000;
+        }
+        .search-container {
+                text-align: center;
+        }
+        .search-box {
+                width: 500px;
+                padding: 10px;
+                font-size: 18px;
+        }
+        .search-button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+            <h1>Sports Subreddits Search</h1>
+            <p id="intro">
+            Welcome to our Reddit Post Collector App!
+            Our application specializes in sports-related subreddits.
+            <br>
+            When searched for, relevant subreddit posts in our database will be displayed for your viewing!
+            </p>
+    </div>
+    <div class="search-container">
+        <form action="/" method="POST">
+            <input type="text" name="query" class="search-box" placeholder="Enter your sports-related query here.">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+    </div>
+</body>
+</html>

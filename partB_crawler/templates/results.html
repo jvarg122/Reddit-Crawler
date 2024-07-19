@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .new-search-button {
+                display: block;
+                margin-bottom: 25px;
+                padding 10px;
+                font-size 16px;
+                background-color: #FFFFFF;
+                color: black;
+                border: 2px solid black;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+        }
+        .new-search-button:hover {
+                background-color: #FFA756;
+        }
+        .result {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .result-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .result-body {
+            margin: 10px 0;
+        }
+        .result-score {
+            color: #008000;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="new-search-button">New Search</a>
+    <h1>Search Results for your query: "{{ query }}"</h1>
+    {% if results %}
+        {% for result in results %}
+            <div class="result">
+                <div class="result-title">{{ result.Title }}</div>
+                <div class="result-body">{{ result.Body }}</div>
+                <div class="result-score">Score: {{ result.Score }}</div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
